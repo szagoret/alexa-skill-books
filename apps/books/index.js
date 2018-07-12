@@ -12,7 +12,7 @@ var app = new alexa.app('books');
 // var app = chatskills.app('books');
 
 app.launch(function (req, res) {
-    res.say('What book would you like to know about? Please say get book, followed by the\
+    res.say('Hello Sergiu! What book would you like to know about? Please say get book, followed by the\
  title.').reprompt('Please say get book, followed by the title.').shouldEndSession(false);
 });
 
