@@ -12,6 +12,13 @@ var app = new alexa.app('books');
 // var app = chatskills.app('books');
 
 app.launch(function (req, res) {
+    res.say(`
+    <speak>
+    Hey oameni!
+        <audio src="https://s3.eu-central-1.amazonaws.com/szagoret-s3/em-skill.mp3" /> 
+    </speak> 
+    
+    `);
     res.say('Hello Sergiu! What book would you like to know about? Please say get book, followed by the\
  title.').reprompt('Please say get book, followed by the title.').shouldEndSession(false);
 });
@@ -193,8 +200,8 @@ app.intent('AMAZON.StopIntent', {
 app.intent('AMAZON.StartOverIntent', {
     'slots': {},
     'utterances': []
-}, function(req,res) {
-  res.say('Please say get book, followed by the title.').shouldEndSession(false);
+}, function (req, res) {
+    res.say('Please say get book, followed by the title.').shouldEndSession(false);
 });
 
 // chatskills.launch(app);
