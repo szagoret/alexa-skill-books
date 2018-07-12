@@ -5,7 +5,7 @@ var xml2js = require('xml2js').parseString;
 var request = require('request');
 var deasync = require('deasync');
 
-var key = 'wlWZmvYQPxpuuJFOCRFA';
+var key = `${process.env.GOODREADS_API_KEY}`;
 
 // Define an alexa-app
 var app = new alexa.app('books');
